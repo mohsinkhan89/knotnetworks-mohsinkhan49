@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 460" width="540" height="460">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1B4B"/>
+      <stop offset="50%" stop-color="#2D126B"/>
+      <stop offset="100%" stop-color="#0E0838"/>
+    </linearGradient>
+    <linearGradient id="blobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5D4"/>
+      <stop offset="100%" stop-color="#0077FF"/>
+    </linearGradient>
+    <clipPath id="blobClip">
+      <path d="M 50 100 C 60 20, 200 10, 360 40 C 500 70, 520 200, 480 340 C 440 450, 250 460, 100 420 C 10 380, 40 200, 50 100 Z"/>
+    </clipPath>
+  </defs>
+  <!-- Outer Glow Orbs -->
+  <circle cx="490" cy="180" r="18" fill="#00D2B5" opacity="0.8"/>
+  <circle cx="30" cy="380" r="10" fill="#7C3AED" opacity="0.6"/>
+  <!-- Blob Frame Background -->
+  <path d="M 45 95 C 55 15, 205 5, 368 35 C 508 65, 528 195, 488 335 C 448 445, 255 455, 95 415 C 5 375, 35 195, 45 95 Z" fill="url(#blobGrad)" opacity="0.4"/>
+  <!-- Clipped Image Area -->
+  <g clip-path="url(#blobClip)">
+    <rect x="0" y="0" width="540" height="460" fill="url(#heroGrad)"/>
+    <!-- Simulated Team Photo Graphics -->
+    <rect x="0" y="0" width="540" height="460" fill="#2A1B60" opacity="0.9"/>
+    <!-- Abstract Team silhouettes / graphics -->
+    <g fill="#FFFFFF" opacity="0.85">
+      <!-- Row of team people avatars -->
+      <circle cx="160" cy="180" r="22"/><rect x="140" y="210" width="40" height="60" rx="10"/>
+      <circle cx="220" cy="170" r="20"/><rect x="202" y="198" width="36" height="60" rx="10"/>
+      <circle cx="270" cy="165" r="24"/><rect x="248" y="197" width="44" height="70" rx="10"/>
+      <circle cx="330" cy="170" r="20"/><rect x="312" y="198" width="36" height="60" rx="10"/>
+      <circle cx="390" cy="180" r="22"/><rect x="370" y="210" width="40" height="60" rx="10"/>
+
+      <!-- Front Row -->
+      <circle cx="190" cy="240" r="24" fill="#00D2B5"/><rect x="168" y="272" width="44" height="80" rx="12" fill="#00D2B5"/>
+      <circle cx="270" cy="230" r="28" fill="#00F5D4"/><rect x="244" y="266" width="52" height="90" rx="14" fill="#00F5D4"/>
+      <circle cx="350" cy="240" r="24" fill="#00D2B5"/><rect x="328" y="272" width="44" height="80" rx="12" fill="#00D2B5"/>
+    </g>
+    <!-- Overlay banner tag -->
+    <rect x="80" y="70" width="380" height="40" rx="20" fill="rgba(0,0,0,0.4)"/>
+    <text x="270" y="95" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">RTDS TEAM - CELEBRATING EXCELLENCE</text>
+  </g>
+
+  <!-- 20+ Years Excellence Glass Floating Badge -->
+  <g transform="translate(370, 310)">
+    <rect x="0" y="0" width="130" height="130" rx="65" fill="#FFFFFF" shadow="0 10px 25px rgba(0,0,0,0.15)"/>
+    <circle cx="65" cy="65" r="58" fill="none" stroke="#00D2B5" stroke-width="3" stroke-dasharray="8 4"/>
+    <text x="65" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="32" fill="#0E0838" text-anchor="middle">20+</text>
+    <text x="65" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#666" text-anchor="middle">Years of</text>
+    <text x="65" y="92" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="#00D2B5" text-anchor="middle">Excellence</text>
+  </g>
+</svg>

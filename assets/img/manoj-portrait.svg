@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 380" width="320" height="380">
+  <defs>
+    <clipPath id="manojClip">
+      <rect width="280" height="340" rx="20" ry="20"/>
+    </clipPath>
+  </defs>
+  <!-- Curved Accent Shape behind -->
+  <path d="M 0 30 C 0 10, 20 0, 40 0 L 260 0 C 280 0, 300 20, 300 40 L 300 320 C 300 340, 280 360, 260 360 L 40 360 C 20 360, 0 340, 0 320 Z" fill="#1E1B4B" opacity="0.3" transform="translate(15, 15)"/>
+  
+  <g clip-path="url(#manojClip)" transform="translate(10, 10)">
+    <rect width="280" height="340" fill="#E2E8F0"/>
+    <!-- Simulated Portrait -->
+    <circle cx="140" cy="110" r="50" fill="#475569"/>
+    <path d="M40 310 C 40 200, 240 200, 240 310 Z" fill="#0F172A"/>
+    <!-- Suit collar & tie -->
+    <polygon points="125,200 155,200 140,240" fill="#FFFFFF"/>
+    <polygon points="136,200 144,200 142,260 140,265 138,260" fill="#2563EB"/>
+    <rect x="0" y="280" width="280" height="60" fill="rgba(15, 23, 42, 0.8)"/>
+    <text x="140" y="306" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">Manoj Chellappa</text>
+    <text x="140" y="324" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="10" fill="#00D2B5" text-anchor="middle">Co-Founder &amp; MD, RTDS</text>
+  </g>
+</svg>

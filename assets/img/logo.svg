@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 50" width="180" height="50">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="180" height="50" rx="6" fill="transparent"/>
+    <!-- Icon graphic -->
+    <path d="M12 14 C12 8, 28 8, 28 14 C28 20, 12 20, 12 26 C12 34, 30 34, 30 26" stroke="#00D2B5" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="34" cy="14" r="3" fill="#00F5D4"/>
+    <!-- RTDS text -->
+    <text x="44" y="28" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="1">rtds</text>
+    <text x="44" y="38" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="600" font-size="7" fill="#00D2B5" letter-spacing="0.5">REAL TIME DATA SERVICES</text>
+  </g>
+</svg>
