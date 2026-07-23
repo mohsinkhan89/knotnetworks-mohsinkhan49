@@ -662,10 +662,151 @@ button, input {
   grid-template-columns: 1.1fr 1fr;
 }
 
+/* Visual Frame Base */
 .visual-frame {
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+/* Leadership Visual Frame Styling */
+.leadership-visual-frame {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leadership-main-img {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(11, 6, 51, 0.12);
+}
+
+.lead-blue-bg {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  width: 140px;
+  height: 180px;
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  border-radius: 60px 0 0 60px;
+  z-index: 1;
+}
+
+.lead-border-frame {
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  width: 360px;
+  height: 270px;
+  border: 1.5px solid #2563eb;
+  border-radius: 20px;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.lead-dot-matrix {
+  position: absolute;
+  bottom: 10px;
+  left: -20px;
+  width: 60px;
+  height: 80px;
+  background-image: radial-gradient(circle, #cbd5e1 2px, transparent 2px);
+  background-size: 10px 10px;
+  z-index: 1;
+}
+
+/* Culture Visual Frame Styling */
+.culture-visual-frame {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.culture-img-big {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  z-index: 3;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.culture-img-big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.culture-img-small {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 4;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.culture-img-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.culture-decor-yellow {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  width: 55px;
+  height: 55px;
+  z-index: 2;
+}
+
+.culture-decor-blue {
+  position: absolute;
+  bottom: -5px;
+  right: 15px;
+  width: 85px;
+  height: 85px;
+  z-index: 2;
+}
+
+.culture-decor-green {
+  position: absolute;
+  top: 140px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+}
+
+.culture-dot-matrix {
+  position: absolute;
+  bottom: 10px;
+  left: 180px;
+  width: 70px;
+  height: 35px;
+  background-image: radial-gradient(circle, #cbd5e1 2px, transparent 2px);
+  background-size: 10px 10px;
+  z-index: 1;
 }
 
 .block-text {
