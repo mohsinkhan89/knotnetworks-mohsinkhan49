@@ -2138,6 +2138,118 @@ button, input {
   }
 }
 
+/* Partners: customer-card visual language with dots-only pagination */
+.partners-section {
+  padding: 1.25rem 0 1rem;
+  background: #fff;
+  border-top: 1px solid #edf0f3;
+  border-bottom: 1px solid #e7eaee;
+}
+
+.partners-container {
+  max-width: 1080px;
+  padding-inline: 0;
+}
+
+.partners-heading {
+  margin-bottom: .85rem;
+  color: #101933;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.partners-slider {
+  max-width: 1080px;
+  padding: 4px 0;
+  overflow: hidden;
+}
+
+.partners-track {
+  align-items: stretch;
+}
+
+.partners-track .partner-logo {
+  flex: 0 0 25%;
+  height: 104px;
+  padding: .65rem;
+  border: 0;
+  background: transparent;
+}
+
+.partners-track .partner-logo::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: .35rem;
+  border: 1px solid #e7eaee;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .05);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.partners-track .partner-logo:hover::before {
+  transform: translateY(-2px);
+  border-color: var(--color-primary-cyan);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, .09);
+}
+
+.partners-track .partner-logo::after {
+  display: none;
+}
+
+.partners-track .partner-logo img {
+  position: relative;
+  z-index: 1;
+  width: 78%;
+  height: 74px;
+  object-fit: contain;
+}
+
+.partners-track .partner-earth {
+  position: relative;
+  z-index: 1;
+  font-size: .78rem;
+}
+
+.partners-pagination {
+  display: flex;
+  height: auto;
+  margin-top: .7rem;
+  gap: .4rem;
+}
+
+.partner-dot {
+  width: 7px;
+  height: 7px;
+  background: #cbd0d7;
+}
+
+.partner-dot.active {
+  width: 20px;
+  background: #19284c;
+}
+
+@media (max-width: 1024px) {
+  .partners-container {
+    padding-inline: 1.5rem;
+  }
+
+  .partners-track .partner-logo {
+    flex-basis: 33.333333%;
+  }
+}
+
+@media (max-width: 680px) {
+  .partners-track .partner-logo {
+    flex-basis: 100%;
+    height: 100px;
+    padding-inline: .65rem;
+  }
+}
+
 /* Full-page reference alignment and motion system */
 .offerings-section {
   overflow: hidden;
@@ -3245,4 +3357,13 @@ button, input {
     line-height: 1.45;
     text-align: center;
   }
+}
+
+/* Keep the partners card slider authoritative after legacy section rules. */
+.partners-section {
+  padding: 1.25rem 0 1rem;
+}
+
+.partners-track .partner-logo {
+  isolation: isolate;
 }
