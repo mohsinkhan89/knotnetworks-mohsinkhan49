@@ -214,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let partnerPage = 0;
     let partnerPageCount = 1;
     let partnersPerPage = 4;
-    let partnerTimer;
 
     const showPartnerPage = (index) => {
       partnerPage = Math.min(index, partnerPageCount - 1);
@@ -238,7 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.setAttribute('aria-label', `Show partner slide ${index + 1}`);
         dot.addEventListener('click', () => {
           showPartnerPage(index);
-          startPartnerAutoplay();
         });
         pagination.appendChild(dot);
       }
@@ -247,16 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
       showPartnerPage(0);
     };
 
-    const startPartnerAutoplay = () => {
-      clearInterval(partnerTimer);
-      partnerTimer = setInterval(() => showPartnerPage((partnerPage + 1) % partnerPageCount), 4500);
-    };
-
-    partnersSlider.addEventListener('mouseenter', () => clearInterval(partnerTimer));
-    partnersSlider.addEventListener('mouseleave', startPartnerAutoplay);
     window.addEventListener('resize', buildPartnerPagination);
     buildPartnerPagination();
-    startPartnerAutoplay();
   }
 
   // -------------------------------------------------------------------

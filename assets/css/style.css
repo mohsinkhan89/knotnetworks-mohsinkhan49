@@ -3441,8 +3441,8 @@ section p {
 }
 
 .footer-logo {
-  width: 92px;
-  height: 35px;
+  width: 140px;
+  height: auto;
   margin-bottom: .65rem;
   object-fit: contain;
   object-position: left center;
@@ -3451,9 +3451,9 @@ section p {
 .footer-map-card {
   display: block;
   width: 150px;
-  overflow: hidden;
+  /* overflow: hidden;
   border: 1px solid rgba(255, 255, 255, .25);
-  border-radius: 6px;
+  border-radius: 6px; */
 }
 
 .footer-map-card img {
@@ -3522,7 +3522,7 @@ section p {
 .footer-social-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 .footer-socials {
