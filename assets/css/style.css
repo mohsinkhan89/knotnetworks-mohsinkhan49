@@ -20,7 +20,7 @@
   --color-accent-blue: #277DDC;
   --color-accent-purple: #376FAF;
   --color-accent-yellow: #F59E0B;
-  --color-accent-green: #10B981;
+  --color-accent-green: #4A96F3;
   
   /* Neutral Colors */
   --color-light-bg: #F4F8FD;
@@ -2800,6 +2800,75 @@ button, input {
   .awards-sidebar { grid-column: auto; padding: 1.6rem; }
 }
 
+/* Knot Networks blue icons and polished metric interactions */
+.metric-card {
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  transition:
+    transform .35s cubic-bezier(.22, .61, .36, 1),
+    background-color .35s ease,
+    box-shadow .35s ease;
+}
+
+.metric-card::marker { display: none; }
+
+.metric-card:hover {
+  z-index: 2;
+  background: linear-gradient(135deg, rgba(74, 150, 243, .2), rgba(39, 125, 220, .1));
+  box-shadow: inset 0 0 0 1px rgba(111, 174, 255, .3), 0 16px 34px rgba(2, 14, 31, .2);
+  transform: translateY(-5px);
+}
+
+.metric-icon-box {
+  color: #6FAEFF;
+  transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), color .3s ease;
+}
+
+.metric-card:hover .metric-icon-box {
+  color: #9BC7FF;
+  transform: translateY(-2px) scale(1.12) rotate(-3deg);
+}
+
+.metric-number {
+  min-width: 4ch;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  transition: color .25s ease, text-shadow .25s ease, transform .25s ease;
+}
+
+.metric-number.is-counting {
+  color: #9BC7FF;
+  text-shadow: 0 0 18px rgba(74, 150, 243, .45);
+}
+
+.metric-number.is-complete {
+  animation: counter-finish .45s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+@keyframes counter-finish {
+  0% { transform: scale(.92); }
+  55% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.metric-label { color: #d8e8fb; }
+
+.know-more-link { color: var(--color-primary-cyan); }
+.know-more-link::before {
+  background: linear-gradient(90deg, var(--color-accent-blue), var(--color-primary-cyan));
+}
+.know-more-link:hover { color: var(--color-primary-cyan-hover); }
+
+@media (prefers-reduced-motion: reduce) {
+  .metric-card,
+  .metric-icon-box,
+  .metric-number {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* Consistent typography across all content sections */
 :root {
   --section-heading-size: 2rem;
@@ -2896,7 +2965,7 @@ section p {
   justify-content: center;
   border-radius: 8px;
   background: #e5f8f5;
-  color: #079c91;
+  color: #4A96F3;
   font-size: .9rem;
 }
 
@@ -2994,7 +3063,7 @@ section p {
   align-items: center;
   gap: .5rem;
   padding: .3rem 0 .38rem;
-  color: #079c91;
+  color: #4A96F3;
   font-size: .82rem;
   font-weight: 700;
   line-height: 1.2;
@@ -3011,7 +3080,7 @@ section p {
   left: 0;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #079c91, #00d2b5);
+  background: linear-gradient(90deg, #277DDC, #4A96F3);
   transform: scaleX(.28);
   transform-origin: left;
   opacity: .55;
@@ -3027,7 +3096,7 @@ section p {
 
 .know-more-link:hover {
   gap: .72rem;
-  color: #006f69;
+  color: #6FAEFF;
 }
 
 .know-more-link:hover::before {

@@ -99,34 +99,44 @@ document.addEventListener('DOMContentLoaded', () => {
   function countUp(el) {
     const target = parseInt(el.getAttribute('data-target') || '0', 10);
     const suffix = el.getAttribute('data-suffix') || '';
-    const duration = 2000; // ms
-    const stepTime = 30;
-    const steps = duration / stepTime;
-    const increment = target / steps;
-    let current = 0;
+    const duration = 1600;
+    const startTime = performance.now();
 
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        el.textContent = target.toLocaleString() + suffix;
-        clearInterval(timer);
+    el.textContent = `0${suffix}`;
+    el.classList.add('is-counting');
+
+    function updateCounter(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(target * easedProgress);
+      el.textContent = `${current.toLocaleString()}${suffix}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
       } else {
-        el.textContent = Math.floor(current).toLocaleString() + suffix;
+        el.textContent = `${target.toLocaleString()}${suffix}`;
+        el.classList.remove('is-counting');
+        el.classList.add('is-complete');
       }
-    }, stepTime);
+    }
+
+    requestAnimationFrame(updateCounter);
   }
 
   // IntersectionObserver for Stats Section
   const statsSection = document.querySelector('.metrics-section');
   if (statsSection && statNumbers.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, statsObserver) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && !animated) {
           animated = true;
-          statNumbers.forEach(el => countUp(el));
+          statNumbers.forEach((el, index) => {
+            window.setTimeout(() => countUp(el), index * 80);
+          });
+          statsObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
     observer.observe(statsSection);
   }
