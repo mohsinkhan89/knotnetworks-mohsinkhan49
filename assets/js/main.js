@@ -16,6 +16,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const dropdownItems = document.querySelectorAll('.has-dropdown');
+  dropdownItems.forEach(item => {
+    const trigger = item.querySelector('.dropdown-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const willOpen = !item.classList.contains('open');
+      dropdownItems.forEach(otherItem => {
+        otherItem.classList.remove('open');
+        otherItem.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+      });
+      item.classList.toggle('open', willOpen);
+      trigger.setAttribute('aria-expanded', String(willOpen));
+      if (!willOpen) trigger.blur();
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.has-dropdown')) {
+      dropdownItems.forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      dropdownItems.forEach(item => {
+        item.classList.remove('open');
+        item.querySelector('.dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
   // -------------------------------------------------------------------
   // 2. Interactive Accordion & Dynamic Logo Switcher (Changing Section)
   // -------------------------------------------------------------------
