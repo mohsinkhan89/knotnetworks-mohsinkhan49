@@ -49,6 +49,220 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Screenshot reference: executive quote + awards composition */
+.testimonial-section {
+  padding: 1.1rem 0 1.45rem;
+  background-color: #fbfcfd;
+  background-image: radial-gradient(circle, #d9e6e7 1px, transparent 1.15px);
+  background-size: 11px 11px;
+}
+
+.testimonial-grid {
+  max-width: 800px;
+  min-height: 225px;
+  padding-inline: 1rem;
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 2.1rem;
+}
+
+.testimonial-portrait {
+  width: 100%;
+  height: 225px;
+}
+
+.executive-photo {
+  width: 205px;
+  height: 218px;
+  border-radius: 7px;
+  object-position: center 20%;
+  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.16);
+}
+
+.portrait-outline {
+  width: 205px;
+  height: 218px;
+  border-width: 1px;
+  border-radius: 12px;
+}
+
+.portrait-outline-one { right: 11px; top: -5px; }
+.portrait-outline-two { right: 29px; top: 4px; }
+.portrait-decor-mint { width: 112px; left: 3px; bottom: 6px; }
+.portrait-decor-indigo { width: 90px; left: 22px; top: 66px; }
+
+.quote-card {
+  min-height: 205px;
+  padding: 2.8rem 1.75rem 1.2rem;
+  border: 1px solid #cce9e7;
+  border-radius: 2px;
+  box-shadow: 0 4px 15px rgba(15, 118, 110, 0.08);
+}
+
+.quote-mark {
+  top: .05rem;
+  left: 1.65rem;
+  color: #09a99f;
+  font-size: 3.4rem;
+  line-height: 1;
+}
+
+.quote-mark-close { right: 1.65rem; left: auto; }
+
+.quote-text {
+  margin-bottom: .85rem;
+  color: #182335;
+  font-size: .72rem;
+  font-weight: 500;
+  line-height: 1.72;
+}
+
+.author-name { font-size: .72rem; }
+.author-title { font-size: .58rem; }
+
+.linkedin-badge {
+  width: 16px;
+  height: 16px;
+  margin-top: .5rem;
+  font-size: .56rem;
+}
+
+.awards-section {
+  padding: 1.15rem 0 1.75rem;
+  background: linear-gradient(90deg, #fffaf0 0%, #fff7e5 52%, #fffaf1 100%);
+}
+
+.awards-section > .container {
+  max-width: 850px;
+  padding-inline: 1rem;
+}
+
+.awards-heading {
+  margin-bottom: .2rem;
+  font-size: .94rem;
+  letter-spacing: -.02em;
+}
+
+.awards-section .section-desc {
+  max-width: 620px;
+  color: #394150;
+  font-size: .58rem;
+  line-height: 1.45;
+}
+
+.awards-layout {
+  grid-template-columns: minmax(0, 4fr) 132px 172px;
+  gap: .9rem;
+  margin-top: 1.1rem;
+}
+
+.awards-cards-grid { gap: .55rem; }
+
+.award-card {
+  min-width: 0;
+  border-radius: 7px;
+  box-shadow: 0 3px 11px rgba(30, 41, 59, 0.11);
+}
+
+.award-card img {
+  min-height: 0;
+  height: 192px;
+  object-fit: cover;
+}
+
+.award-recognition-stack { gap: .45rem; }
+
+.award-recognition-stack img {
+  min-height: 0;
+  border-radius: 5px;
+}
+
+.awards-sidebar { padding: .05rem 0; }
+
+.awards-sidebar-title {
+  margin-bottom: .8rem;
+  font-size: .57rem;
+  line-height: 1.55;
+}
+
+.awards-sidebar-copy {
+  margin-bottom: .7rem;
+  font-size: .54rem;
+  line-height: 1.6;
+}
+
+.awards-sidebar .know-more-link {
+  gap: .35rem;
+  font-size: .54rem;
+}
+
+.awards-sidebar .know-more-link svg {
+  width: 10px;
+  height: 10px;
+}
+
+@media (max-width: 900px) {
+  .testimonial-grid {
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .awards-layout {
+    grid-template-columns: minmax(0, 1fr) 135px;
+  }
+
+  .awards-sidebar {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    align-items: start;
+  }
+}
+
+@media (max-width: 680px) {
+  .testimonial-section { padding: 2rem 0; }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .testimonial-portrait {
+    max-width: 290px;
+    margin-inline: auto;
+    transform: none;
+  }
+
+  .quote-card { min-height: 0; }
+  .awards-section { padding: 2rem 0; }
+
+  .awards-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .awards-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .award-card img { height: auto; }
+
+  .award-recognition-stack {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+  }
+
+  .awards-sidebar {
+    grid-column: auto;
+    display: block;
+  }
+
+  .awards-sidebar-title,
+  .awards-sidebar-copy {
+    font-size: .72rem;
+  }
+}
+
 /* --- Base & Reset Rules --- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -1010,7 +1224,7 @@ button, input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0px;
   transition: transform var(--transition-fast);
 }
 
@@ -1048,6 +1262,183 @@ button, input {
   line-height: 1.6;
 }
 
+/* Screenshot-matched testimonial and awards composition */
+.testimonial-section {
+  padding: 2.2rem 0 3rem;
+  background-color: #fbfcfd;
+  background-image: radial-gradient(#d7e2e4 1.2px, transparent 1.2px);
+  background-size: 12px 12px;
+}
+
+.testimonial-grid {
+  grid-template-columns: 0.9fr 1.5fr;
+  gap: 4rem;
+  max-width: 960px;
+}
+
+.testimonial-portrait {
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.executive-photo {
+  position: relative;
+  z-index: 4;
+  width: 225px;
+  height: 260px;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(30, 41, 59, 0.15);
+}
+
+.portrait-outline {
+  position: absolute;
+  z-index: 1;
+  width: 225px;
+  height: 255px;
+  border: 2px solid #d9e6e7;
+  border-radius: 15px;
+}
+
+.portrait-outline-one { right: 16px; top: 2px; }
+.portrait-outline-two { right: 36px; top: 12px; }
+
+.portrait-decor {
+  position: absolute;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.portrait-decor-mint { width: 130px; left: 12px; bottom: 4px; }
+.portrait-decor-indigo { width: 105px; left: 30px; top: 80px; }
+
+.quote-card {
+  border-radius: 3px;
+  padding: 3rem 2rem 2rem;
+  box-shadow: 0 5px 20px rgba(15, 118, 110, 0.08);
+  border-color: #cceeed;
+}
+
+.quote-mark {
+  position: absolute;
+  left: 2rem;
+  top: 0.2rem;
+  font-size: 3.7rem;
+  margin: 0;
+}
+
+.quote-mark-close { left: auto; right: 2rem; }
+
+.quote-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  font-style: normal;
+}
+
+.author-info {
+  display: block;
+  border: 0;
+  padding: 0;
+}
+
+.author-name { font-size: 0.9rem; }
+.author-title { font-size: 0.73rem; }
+
+.linkedin-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  margin-top: 0.75rem;
+  border-radius: 2px;
+  background: #0a66c2;
+  color: #fff;
+  font-size: 0.72rem;
+}
+
+.awards-section {
+  padding: 2rem 0 3rem;
+  background: linear-gradient(90deg, #fffaf0 0%, #fff7e5 50%, #fffaf0 100%);
+}
+
+.awards-heading {
+  color: #0b1634;
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 0.45rem;
+}
+
+.awards-layout {
+  grid-template-columns: minmax(0, 3.1fr) minmax(170px, 1fr) minmax(190px, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.awards-cards-grid { gap: 0.75rem; }
+
+.award-card {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border-color: #eee8dd;
+  box-shadow: 0 4px 14px rgba(30, 41, 59, 0.12);
+}
+
+.award-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 235px;
+  object-fit: cover;
+}
+
+.award-recognition-stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+.award-recognition-stack img {
+  width: 100%;
+  height: 100%;
+  min-height: 72px;
+  object-fit: cover;
+  border: 1px solid #eee8dd;
+  border-radius: 7px;
+  box-shadow: 0 3px 10px rgba(30, 41, 59, 0.1);
+}
+
+.awards-sidebar {
+  padding: 0.25rem 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.awards-sidebar-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #17213a;
+  margin-bottom: 1.1rem;
+  line-height: 1.55;
+}
+
+.awards-sidebar-copy {
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: #687084;
+  margin-bottom: 1.2rem;
+}
+
 /* ==========================================================================
    9. MEET OUR CUSTOMERS SECTION
    ========================================================================== */
@@ -1082,6 +1473,94 @@ button, input {
   border-color: var(--color-primary-cyan);
   box-shadow: var(--shadow-sm);
   transform: translateY(-2px);
+}
+
+/* Screenshot-matched customer logo gallery */
+.customers-section {
+  padding: 1.25rem 0 1rem;
+  background: #fff;
+}
+
+.customers-container {
+  max-width: 1180px;
+}
+
+.customers-heading {
+  margin-bottom: .85rem;
+  color: #101933;
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.customers-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: .65rem;
+}
+
+.customer-logo-card {
+  height: 104px;
+  padding: .8rem 1rem;
+  overflow: hidden;
+  border: 1px solid #e7eaee;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .05);
+}
+
+.customer-logo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.customers-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  margin-top: .8rem;
+}
+
+.customers-dots {
+  display: flex;
+  gap: .35rem;
+}
+
+.customer-page-dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border-radius: 50%;
+  background: #cbd0d7;
+  cursor: pointer;
+}
+
+.customer-page-dot.active {
+  background: #19284c;
+}
+
+.customers-page-arrow {
+  display: inline-flex;
+  width: 27px;
+  height: 27px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #ffad20;
+  color: #fff;
+  cursor: pointer;
+  font-size: .65rem;
+}
+
+@media (max-width: 1024px) {
+  .customers-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .customers-grid { grid-template-columns: repeat(2, 1fr); }
+  .customer-logo-card { height: 92px; }
 }
 
 /* ==========================================================================
@@ -1138,11 +1617,273 @@ button, input {
   box-shadow: var(--shadow-md);
 }
 
+/* Screenshot-matched Career at RTDS panel */
+.career-section {
+  padding: 3rem 0;
+  background: #fff;
+}
+
+.career-grid {
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.32fr);
+  gap: 1.35rem;
+  align-items: stretch;
+}
+
+.career-dark-card {
+  min-height: 360px;
+  padding: 1.4rem 1.6rem;
+  border-radius: 15px;
+  background:
+    radial-gradient(circle at 25% 15%, rgba(92, 55, 210, 0.6), transparent 35%),
+    linear-gradient(145deg, #291078 0%, #25106e 100%);
+  box-shadow: 0 8px 20px rgba(42, 18, 117, 0.18);
+}
+
+.career-news-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.career-news-item {
+  display: grid;
+  grid-template-columns: 42px 1fr 18px;
+  gap: 0.85rem;
+  align-items: center;
+  min-height: 83px;
+  padding: 0.75rem 0;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.77rem;
+  font-weight: 600;
+  line-height: 1.45;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.career-news-item:hover {
+  color: #8cf3df;
+  padding-left: 0.25rem;
+}
+
+.career-news-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.11);
+  color: #bcaef0;
+  font-size: 1.25rem;
+}
+
+.career-news-arrow {
+  font-size: 0.75rem;
+  justify-self: end;
+}
+
+.career-explore-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.1rem;
+  padding: 0.68rem 1.1rem;
+  border-radius: 4px;
+  background: #fff;
+  color: #24116b;
+  font-size: 0.74rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.career-content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.career-heading {
+  margin: 0 0 0.7rem;
+}
+
+.career-heading h2 {
+  color: #111827;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.career-heading p {
+  margin-top: 0.2rem;
+  color: #4b5563;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.career-gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.03fr 0.72fr 0.72fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  min-height: 310px;
+  border-radius: 10px;
+  box-shadow: none;
+  background: #fff;
+}
+
+.career-photo {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.career-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.career-photo:hover img {
+  transform: scale(1.04);
+}
+
+.career-photo-main {
+  grid-row: 1 / 3;
+  border-radius: 9px 0 0 9px;
+}
+
+.career-photo-party {
+  grid-column: 2 / 4;
+  border-radius: 0 9px 0 0;
+}
+
+.career-photo-activity {
+  grid-column: 2;
+}
+
+.career-photo-celebration {
+  grid-column: 3;
+  border-radius: 0 0 9px 0;
+}
+
 /* What's Happening Section */
 .happening-section {
-  background: var(--color-dark-bg);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(77, 32, 159, 0.55), transparent 42%),
+    linear-gradient(115deg, #17084f 0%, #24106b 55%, #321181 100%);
   color: #FFFFFF;
-  padding: 5rem 0;
+  padding: 2rem 0 2.2rem;
+}
+
+.happening-dot-wave {
+  position: absolute;
+  z-index: 0;
+  left: -6%;
+  bottom: -42%;
+  width: 49%;
+  height: auto;
+  opacity: 0.72;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.happening-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(275px, 0.75fr) minmax(0, 1.45fr);
+  gap: 1rem;
+  /* max-width: 920px; */
+  align-items: end;
+}
+
+.happening-news {
+  padding-bottom: 0.15rem;
+}
+
+.happening-news-list {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.065);
+  box-shadow: 0 8px 22px rgba(7, 4, 32, 0.13);
+}
+
+.happening-news-item {
+  display: grid;
+  grid-template-columns: 1fr 18px;
+  gap: 0.8rem;
+  align-items: center;
+  min-height: 62px;
+  padding: 0.78rem 1rem;
+  color: #f3efff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.105);
+  font-size: 0.67rem;
+  font-weight: 500;
+  line-height: 1.45;
+  transition: background var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.happening-news-item:last-child {
+  border-bottom: 0;
+}
+
+.happening-news-item:hover {
+  padding-left: 1.15rem;
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.happening-news-item i {
+  justify-self: end;
+  color: #e7e0ff;
+  font-size: 0.72rem;
+}
+
+.happening-all-news {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.65rem;
+  padding: 0.62rem 1.05rem;
+  border-radius: 4px;
+  background: #fff;
+  color: #1f0a65;
+  box-shadow: 0 4px 12px rgba(7, 4, 32, 0.2);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.happening-feature h2 {
+  margin-bottom: 0.65rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.happening-photo-frame {
+  height: 256px;
+  padding: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: 0 8px 20px rgba(7, 4, 32, 0.2);
+}
+
+.happening-photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+  border-radius: 5px;
 }
 
 /* ==========================================================================
@@ -1172,6 +1913,147 @@ button, input {
 
 .partner-logo:hover {
   color: #0B0633;
+}
+
+/* Screenshot-matched partners strip */
+.partners-section {
+  padding: .45rem 0 .35rem;
+  background: #fff;
+  border-top: 1px solid #eef0f3;
+  border-bottom: 1px solid #e7e9ed;
+  box-shadow: 0 -2px 9px rgba(15, 23, 42, .04);
+}
+
+.partners-container {
+  max-width: 100%;
+  padding-inline: 0;
+}
+
+.partners-heading {
+  margin-bottom: .15rem;
+  color: #111a38;
+  font-size: .78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.partners-flex {
+  flex: 0 0 var(--partners-slide-width);
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  align-items: center;
+}
+
+.partners-slider {
+  position: relative;
+  max-width: 980px;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.partners-track {
+  display: flex;
+  width: 100%;
+  transition: transform .65s cubic-bezier(.22, .61, .36, 1);
+}
+
+.partners-track .partner-logo {
+  flex: 0 0 25%;
+  padding-inline: 1rem;
+}
+
+.partners-track .partner-logo::after {
+  right: 0;
+}
+
+.partners-pagination {
+  display: flex;
+  justify-content: center;
+  gap: .32rem;
+  height: 8px;
+  margin-top: .05rem;
+}
+
+.partner-dot {
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  border-radius: 50%;
+  background: #c8cbd3;
+  cursor: pointer;
+  transition: width .2s ease, border-radius .2s ease, background .2s ease;
+}
+
+.partner-dot.active {
+  width: 14px;
+  border-radius: 5px;
+  background: #352080;
+}
+
+.partner-logo {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 1px;
+  height: 26px;
+  background: #eef0f3;
+}
+
+.partner-logo img {
+  width: min(122px, 84%);
+  height: 40px;
+  object-fit: contain;
+}
+
+.partner-earth {
+  gap: .35rem;
+  color: #4b4d59;
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+.earth-partner-mark {
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #49328f, #8a75be);
+  color: #fff;
+  font-size: .52rem;
+  font-weight: 800;
+}
+
+.partner-logo:last-child img {
+  width: min(88px, 72%);
+  height: 42px;
+}
+
+@media (max-width: 680px) {
+  .partners-track .partner-logo {
+    flex-basis: 100%;
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1024px) {
+  .partners-track .partner-logo {
+    flex-basis: 33.333333%;
+    padding-inline: .85rem;
+  }
 }
 
 /* ==========================================================================
@@ -1265,6 +2147,33 @@ button, input {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .testimonial-portrait {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .career-dark-card {
+    min-height: auto;
+  }
+
+  .career-gallery {
+    min-height: 390px;
+  }
+
+  .happening-grid {
+    grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  }
+
+  .award-recognition-stack {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+  }
+
+  .award-recognition-stack img {
+    min-height: 0;
+  }
+
   .customers-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1308,6 +2217,76 @@ button, input {
     grid-template-columns: 1fr;
   }
 
+  .testimonial-grid {
+    gap: 1.5rem;
+  }
+
+  .career-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 230px 145px 145px;
+    min-height: 0;
+  }
+
+  .happening-section {
+    padding: 2.5rem 0;
+  }
+
+  .happening-grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .happening-feature {
+    grid-row: 1;
+  }
+
+  .happening-photo-frame {
+    height: 240px;
+  }
+
+  .happening-dot-wave {
+    width: 100%;
+    left: -35%;
+    bottom: -12%;
+  }
+
+  .career-photo-main {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    border-radius: 9px 9px 0 0;
+  }
+
+  .career-photo-party {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    border-radius: 0;
+  }
+
+  .career-photo-activity {
+    grid-column: 1;
+    grid-row: 3;
+    border-radius: 0 0 0 9px;
+  }
+
+  .career-photo-celebration {
+    grid-column: 2;
+    grid-row: 3;
+    border-radius: 0 0 9px 0;
+  }
+
+  .testimonial-portrait {
+    transform: scale(0.9);
+  }
+
+  .quote-card {
+    padding: 3rem 1.4rem 1.5rem;
+  }
+
+  .award-recognition-stack {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 120px);
+  }
+
   .metrics-section {
     padding: 1.25rem 0;
   }
@@ -1331,5 +2310,255 @@ button, input {
 
   .footer-top-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Final placement keeps the reference-section sizing above responsive defaults. */
+@media (min-width: 901px) {
+  .testimonial-section { padding: 1.1rem 0 1.45rem; }
+  .testimonial-grid {
+    max-width: 800px;
+    min-height: 225px;
+    padding-inline: 1rem;
+    grid-template-columns: 310px minmax(0, 1fr);
+    gap: 2.1rem;
+  }
+  .testimonial-portrait { width: 100%; height: 225px; }
+  .executive-photo { width: 205px; height: 218px; border-radius: 7px; object-position: center 20%; }
+  .portrait-outline { width: 205px; height: 218px; border-width: 1px; border-radius: 12px; }
+  .portrait-outline-one { right: 11px; top: -5px; }
+  .portrait-outline-two { right: 29px; top: 4px; }
+  .portrait-decor-mint { width: 112px; left: 3px; bottom: 6px; }
+  .portrait-decor-indigo { width: 90px; left: 22px; top: 66px; }
+  .quote-card { min-height: 205px; padding: 2.8rem 1.75rem 1.2rem; border-radius: 2px; }
+  .quote-mark { top: .05rem; left: 1.65rem; font-size: 3.4rem; }
+  .quote-mark-close { right: 1.65rem; left: auto; }
+  .quote-text { margin-bottom: .85rem; font-size: .72rem; line-height: 1.72; }
+  .author-name { font-size: .72rem; }
+  .author-title { font-size: .58rem; }
+  .linkedin-badge { width: 16px; height: 16px; margin-top: .5rem; font-size: .56rem; }
+
+  .awards-section { padding: 1.15rem 0 1.75rem; }
+  .awards-heading { margin-bottom: .2rem; font-size: .94rem; }
+  .awards-section .section-desc { font-size: .58rem; line-height: 1.45; }
+  .awards-layout {
+    grid-template-columns: minmax(0, 4fr) 132px 172px;
+    gap: .9rem;
+    margin-top: 1.1rem;
+  }
+  .awards-cards-grid { grid-template-columns: repeat(4, 1fr); gap: .55rem; }
+  .award-card img { min-height: 0; height: 192px; }
+  .award-recognition-stack {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: .45rem;
+  }
+  .award-recognition-stack img { min-height: 0; }
+  .awards-sidebar { padding: .05rem 0; }
+  .awards-sidebar-title { margin-bottom: .8rem; font-size: .57rem; line-height: 1.55; }
+  .awards-sidebar-copy { margin-bottom: .7rem; font-size: .54rem; line-height: 1.6; }
+}
+
+/* Exact desktop composition from the supplied testimonial/awards reference */
+@media (min-width: 1025px) {
+  .testimonial-section {
+    padding: 20px 0 25px;
+    background-color: #fbfcfd;
+    background-image: radial-gradient(circle, #d9e6e7 1.15px, transparent 1.3px);
+    background-size: 12px 12px;
+  }
+
+  .testimonial-grid {
+    max-width: 950px;
+    min-height: 320px;
+    padding-inline: 0;
+    grid-template-columns: 360px 1fr;
+    gap: 45px;
+  }
+
+  .testimonial-portrait {
+    width: 360px;
+    height: 320px;
+  }
+
+  .executive-photo {
+    width: 280px;
+    height: 310px;
+    border-radius: 9px;
+    object-fit: cover;
+    object-position: center 17%;
+    box-shadow: 0 9px 25px rgba(30, 41, 59, .16);
+  }
+
+  .portrait-outline {
+    width: 280px;
+    height: 310px;
+    border: 2px solid #d9e6e7;
+    border-radius: 16px;
+  }
+
+  .portrait-outline-one { top: -10px; right: 16px; }
+  .portrait-outline-two { top: 2px; right: 42px; }
+  .portrait-decor-mint { left: 0; bottom: 10px; width: 145px; }
+  .portrait-decor-indigo { left: 24px; top: 92px; width: 118px; }
+
+  .quote-card {
+    min-height: 300px;
+    padding: 67px 38px 25px;
+    border: 1px solid #c9e8e7;
+    border-radius: 2px;
+    box-shadow: 0 5px 18px rgba(15, 118, 110, .08);
+  }
+
+  .quote-mark {
+    top: 5px;
+    left: 36px;
+    font-size: 64px;
+  }
+
+  .quote-mark-close { right: 36px; left: auto; }
+
+  .quote-text {
+    margin-bottom: 18px;
+    font-size: .95rem;
+    line-height: 1.65;
+  }
+
+  .author-name { font-size: .9rem; }
+  .author-title { font-size: .73rem; }
+
+  .linkedin-badge {
+    width: 19px;
+    height: 19px;
+    margin-top: 9px;
+    font-size: .72rem;
+  }
+
+  .awards-section {
+    padding: 20px 0 28px;
+    background: linear-gradient(90deg, #fffaf0 0%, #fff6e4 52%, #fffaf0 100%);
+  }
+
+  .awards-section > .container {
+    max-width: 1160px;
+    padding-inline: 0;
+  }
+
+  .awards-heading {
+    margin-bottom: 4px;
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+
+  .awards-section .section-desc {
+    max-width: 790px;
+    font-size: .875rem;
+    line-height: 1.6;
+  }
+
+  .awards-layout {
+    grid-template-columns: 720px 170px 1fr;
+    gap: 24px;
+    margin-top: 18px;
+    align-items: stretch;
+  }
+
+  .awards-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .award-card {
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #eee8dd;
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(30, 41, 59, .12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .award-card img {
+    width: 100%;
+    height: 150px;
+    min-height: 0;
+    padding: 28px 18px 8px;
+    object-fit: contain;
+  }
+
+  .award-card-caption {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 112px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px 18px;
+    color: #17213a;
+    font-size: .78rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .award-recognition-stack {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 9px;
+  }
+
+  .award-recognition-stack img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .awards-sidebar { padding: 2px 0 0; }
+
+  .awards-sidebar-title {
+    margin-bottom: 17px;
+    font-size: .82rem;
+    line-height: 1.55;
+  }
+
+  .awards-sidebar-copy {
+    margin-bottom: 14px;
+    font-size: .76rem;
+    line-height: 1.65;
+  }
+
+  .awards-sidebar .know-more-link {
+    gap: 7px;
+    font-size: .75rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .award-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .award-card img {
+    width: 100%;
+    height: 145px;
+    min-height: 0;
+    padding: 24px 18px 6px;
+    object-fit: contain;
+  }
+
+  .award-card-caption {
+    padding: 10px 12px 20px;
+    color: #17213a;
+    font-size: .78rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: center;
   }
 }

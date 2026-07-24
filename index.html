@@ -379,11 +379,17 @@
   <section class="testimonial-section">
     <div class="container testimonial-grid">
       <div class="testimonial-portrait">
-        <img src="assets/img/manoj-portrait.svg" alt="Manoj Chellappa portrait" width="320" height="380">
+        <span class="portrait-outline portrait-outline-one" aria-hidden="true"></span>
+        <span class="portrait-outline portrait-outline-two" aria-hidden="true"></span>
+        <img class="portrait-decor portrait-decor-mint" src="assets/img/awards/decor-mint-crescent.png" alt="">
+        <img class="portrait-decor portrait-decor-indigo" src="assets/img/awards/decor-indigo-semicircle.png" alt="">
+        <img class="executive-photo" src="assets/img/awards/manoj-chellappa-executive.png"
+          alt="Manoj Chellappa, Co-Founder and Managing Director" width="520" height="650">
       </div>
 
       <div class="quote-card">
-        <div class="quote-mark">“</div>
+        <div class="quote-mark quote-mark-close" aria-hidden="true">&rdquo;</div>
+        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
         <p class="quote-text">
           We don't just solve IT — we power lasting advances. From today's challenges to future-ready breakthroughs, our
           mission is clear: to be India's go-to partner in scaling, protecting, and innovating through technology.
@@ -405,61 +411,55 @@
   <section class="awards-section">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-subtitle">AWARDS &amp; RECOGNITION</span>
+        <h2 class="awards-heading">AWARDS &amp; RECOGNITION</h2>
         <p class="section-desc" style="margin:0 auto;">
           Real Time Data Services (RTDS) has been honored with the CIO 100 program and NASSCOM Member
           recognitions—testaments to our experience and leadership in technology.
         </p>
       </div>
 
-      <div class="awards-layout" style="margin-top: 3rem;">
+      <div class="awards-layout">
         <div class="awards-cards-grid">
           <!-- 1 -->
           <div class="award-card">
-            <div class="award-icon-box">
-              <svg width="45" height="45" viewBox="0 0 24 24" fill="#00D2B5">
-                <path
-                  d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
-              </svg>
-            </div>
-            <div class="award-title">ISO/IEC 27001:2013 Certified</div>
+            <img src="assets/img/awards/iso-27001-certified.webp" alt="ISO/IEC 27001:2022 Certified">
+            <p class="award-card-caption">ISO/IEC<br>27001:2022<br>Certified</p>
           </div>
           <!-- 2 -->
           <div class="award-card">
-            <div class="award-icon-box">
-              <svg width="45" height="45" viewBox="0 0 24 24" fill="#FF5A5F">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
-              </svg>
-            </div>
-            <div class="award-title">NASSCOM Member</div>
+            <img src="assets/img/awards/nasscom-member.webp" alt="NASSCOM Member">
+            <p class="award-card-caption">NASSCOM<br>Member</p>
           </div>
           <!-- 3 -->
           <div class="award-card">
-            <div class="award-icon-box">
-              <svg width="45" height="45" viewBox="0 0 24 24" fill="#0066FF">
-                <path
-                  d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z" />
-              </svg>
-            </div>
-            <div class="award-title">Microsoft Direct Partner under CSP Program</div>
+            <img src="assets/img/awards/microsoft-csp-partner.webp" alt="Microsoft Direct Partner under CSP Program">
+            <p class="award-card-caption">Microsoft Direct<br>Partner under<br>CSP Program</p>
           </div>
           <!-- 4 -->
           <div class="award-card">
-            <div class="award-icon-box">
-              <svg width="45" height="45" viewBox="0 0 24 24" fill="#00C7FD">
-                <path d="M4 6h16v12H4z" stroke="#00C7FD" stroke-width="2" fill="none" /><text x="7" y="15" font-size="8"
-                  font-weight="bold" fill="#00C7FD">intel</text>
-              </svg>
-            </div>
-            <div class="award-title">Intel Authorized Commercial Hosting Provider</div>
+            <img src="assets/img/awards/intel-titanium-partner.webp"
+              alt="Intel Authorized Commercial Hosting Provider">
+            <p class="award-card-caption">Intel Authorized<br>Commercial<br>Hosting Provider</p>
           </div>
+        </div>
+
+        <div class="award-recognition-stack" aria-label="Additional awards and recognitions">
+          <img src="assets/img/awards/gartner-recognition.png" alt="Gartner recognition">
+          <img src="assets/img/awards/crn-channel-award-2025.png" alt="CRN 100 People of the Channel 2025">
+          <img src="assets/img/awards/sme100-fast-moving-award.png" alt="SME 100 Fast Moving Companies Award">
+          <img src="assets/img/awards/employee-engagement-award-2023.png" alt="Employee Engagement Award 2023">
+          <img src="assets/img/awards/franchise-india-top100-sme-2024.png" alt="Franchise India Top 100 SME Award 2024">
+          <img src="assets/img/awards/silver-stevie-award.png" alt="Silver Stevie Award">
         </div>
 
         <div class="awards-sidebar">
           <p class="awards-sidebar-title">
             We have partnered with the major technological players in the market (just like Microsoft) and feel to
             deliver top notch solutions to businesses at the best prices.
+          </p>
+          <p class="awards-sidebar-copy">
+            Our persistent efforts to deliver customer satisfaction have earned us many awards and prestigious
+            memberships, reflecting our continued success.
           </p>
           <a href="#" class="know-more-link">
             View All Awards
@@ -476,24 +476,32 @@
        9. MEET OUR CUSTOMERS LOGO GRID
        ========================================== -->
   <section class="customers-section">
-    <div class="container">
-      <div class="section-header-center" style="margin-bottom:2.5rem;">
-        <span class="section-subtitle">MEET OUR CUSTOMERS</span>
+    <div class="container customers-container">
+      <h2 class="customers-heading">MEET OUR CUSTOMERS</h2>
+
+      <div class="customers-grid" data-customers-grid>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/fortis.png" alt="Fortis"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/tata-1mg.png" alt="Tata 1mg"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/practo.png" alt="Practo"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/red-chief.png" alt="Red Chief"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/godrej.png" alt="Godrej"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/casio.png" alt="Casio"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/sap.png" alt="SAP"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/cipla.png" alt="Cipla"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/ola.png" alt="OLA"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/01_Dr_Lal_PathLabs.png" alt="Dr Lal PathLabs"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/02_BCG.png" alt="BCG"></div>
+        <div class="customer-logo-card"><img src="assets/img/our-meet/03_CARS24.png" alt="CARS24"></div>
       </div>
 
-      <div class="customers-grid">
-        <div class="customer-logo-card">Fortis</div>
-        <div class="customer-logo-card">TATA 1mg</div>
-        <div class="customer-logo-card">practo</div>
-        <div class="customer-logo-card" style="color:#D97706;">RED CHIEF</div>
-        <div class="customer-logo-card">Godrej</div>
-        <div class="customer-logo-card">CASIO</div>
-        <div class="customer-logo-card">SAP</div>
-        <div class="customer-logo-card" style="color:#2563EB;">Cipla</div>
-        <div class="customer-logo-card">OLA</div>
-        <div class="customer-logo-card" style="color:#B45309;">EUREKA FORBES</div>
-        <div class="customer-logo-card">BCG</div>
-        <div class="customer-logo-card">CARS24</div>
+      <div class="customers-pagination" aria-label="Customer logo pagination">
+        <button class="customers-page-arrow" type="button" data-customer-prev aria-label="Previous customers">
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div class="customers-dots" data-customer-dots></div>
+        <button class="customers-page-arrow" type="button" data-customer-next aria-label="Next customers">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
       </div>
     </div>
   </section>
@@ -504,34 +512,49 @@
   <section class="career-section" id="careers">
     <div class="container career-grid">
       <div class="career-dark-card">
-        <div>
-          <span class="hero-tag">CAREER AT RTDS</span>
-          <h3 style="font-size:1.8rem; font-weight:800; margin-top:0.3rem;">Much more than a workplace</h3>
-
-          <div class="news-list">
-            <div class="news-item">
-              <span>AceCloud 10 Welcomes 125+ Students at Ace Hackathon 2025</span>
-              <span>&rarr;</span>
-            </div>
-            <div class="news-item">
-              <span>AceCloud Technical Team wins for platform, security cloud Superhero Ethics Award...</span>
-              <span>&rarr;</span>
-            </div>
-            <div class="news-item">
-              <span>Mr. Vinay Chhabra, Co-Founder was awarded 'The Best CEO in Cloud Computing'...</span>
-              <span>&rarr;</span>
-            </div>
-          </div>
+        <div class="career-news-list">
+          <a href="#" class="career-news-item">
+            <span class="career-news-icon" aria-hidden="true"><i class="fa-solid fa-users-viewfinder"></i></span>
+            <span>AceCloud 10 Welcomes 125+ Students at Ace Hackathon 2025</span>
+            <i class="fa-solid fa-arrow-right career-news-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="career-news-item">
+            <span class="career-news-icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></span>
+            <span>AceCloud Technology takes the podium, securing cloud superhero title at Other One &amp; EngGenius Awards.</span>
+            <i class="fa-solid fa-arrow-right career-news-arrow" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="career-news-item">
+            <span class="career-news-icon" aria-hidden="true"><i class="fa-solid fa-award"></i></span>
+            <span>Mr. Vinay Chhabra, Co-Founder and Managing Director of AceCloud, was awarded 'The Best CEO in Cloud Computing'.</span>
+            <i class="fa-solid fa-arrow-right career-news-arrow" aria-hidden="true"></i>
+          </a>
         </div>
 
-        <a href="#" class="btn-primary" style="align-self:flex-start;">
-          Explore Careers &rarr;
+        <a href="#" class="career-explore-btn">
+          Explore Careers <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
 
-      <div class="career-gallery">
-        <img src="assets/img/culture-collage.svg" alt="RTDS Team Gallery Photo" width="500" height="380"
-          style="width:100%; height:100%; object-fit:cover;">
+      <div class="career-content">
+        <div class="career-heading">
+          <h2>CAREER AT RTDS</h2>
+          <p>Much more than a workplace</p>
+        </div>
+
+        <div class="career-gallery">
+          <figure class="career-photo career-photo-main">
+            <img src="assets/img/career/career-leadership-team.webp" alt="RTDS leadership and team members">
+          </figure>
+          <figure class="career-photo career-photo-party">
+            <img src="assets/img/career/career-team-party.webp" alt="RTDS team celebration">
+          </figure>
+          <figure class="career-photo career-photo-activity">
+            <img src="assets/img/career/career-team-activity.webp" alt="RTDS team activity">
+          </figure>
+          <figure class="career-photo career-photo-celebration">
+            <img src="assets/img/career/career-tshirt-celebration.webp" alt="RTDS team celebration in custom T-shirts">
+          </figure>
+        </div>
       </div>
     </div>
   </section>
@@ -540,32 +563,33 @@
        11. WHAT'S HAPPENING AT RTDS
        ========================================== -->
   <section class="happening-section" id="resources">
-    <div class="container">
-      <div style="margin-bottom:3rem;">
-        <span class="hero-tag">WHAT'S HAPPENING AT RTDS</span>
-      </div>
-
-      <div class="career-grid">
-        <div>
-          <div class="news-list">
-            <div class="news-item">
-              <span>AceCloud 10 Welcomes 125+ Students at Ace Hackathon 2025</span>
-              <span>&rarr;</span>
-            </div>
-            <div class="news-item">
-              <span>AceCloud Technical Team wins for platform, security cloud Superhero Ethics Award...</span>
-              <span>&rarr;</span>
-            </div>
-            <div class="news-item">
-              <span>Mr. Vinay Chhabra, Co-Founder and MD was awarded 'The Best CEO in Cloud Computing'...</span>
-              <span>&rarr;</span>
-            </div>
-          </div>
-          <a href="#" class="btn-outline" style="margin-top:1.5rem;">See All News &rarr;</a>
+    <img class="happening-dot-wave" src="assets/img/happing/purple-dot-wave.png" alt="" aria-hidden="true">
+    <div class="container happening-grid">
+      <div class="happening-news">
+        <div class="happening-news-list">
+          <a href="#" class="happening-news-item">
+            <span>AceCloud 10 Welcomes 100+ Students at Ace Hackathon 2025</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="happening-news-item">
+            <span>AceCloud TechProm takes the podium, securing cloud superhero title at Other DeepScaleCloud Awards.</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="#" class="happening-news-item">
+            <span>Mr. Vinay Chhabra, Co-Founder and Managing Director of AceCloud, was awarded 'The Best CEO in Cloud Computing'.</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
         </div>
 
-        <div>
-          <img src="assets/img/happening-event.svg" alt="RTDS Featured Event Video" width="500" height="300">
+        <a href="#" class="happening-all-news">
+          See All News <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="happening-feature">
+        <h2>WHAT'S HAPPENING AT RTDS</h2>
+        <div class="happening-photo-frame">
+          <img src="assets/img/happing/rtds-team-event.png" alt="RTDS team at a company event">
         </div>
       </div>
     </div>
@@ -575,18 +599,50 @@
        12. OUR PARTNERS SECTION
        ========================================== -->
   <section class="partners-section">
-    <div class="container">
-      <div class="section-header-center" style="margin-bottom:2rem;">
-        <span class="section-subtitle">OUR PARTNERS</span>
+    <div class="container partners-container">
+      <h2 class="partners-heading">OUR PARTNERS</h2>
+      <div class="partners-slider" data-partners-slider aria-label="Our technology partners">
+        <div class="partners-track">
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/crowdstrike.png" alt="CrowdStrike">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/nasscom.png" alt="NASSCOM">
+          </div>
+          <div class="partner-logo partner-earth" aria-label="EarthPartner">
+            <span class="earth-partner-mark" aria-hidden="true">E</span>
+            <span>EarthPartner</span>
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/veeam.png" alt="Veeam">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/proofpoint.png" alt="Proofpoint">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/aws.png" alt="Amazon Web Services">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/microsoft.png" alt="Microsoft">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/vmware.png" alt="VMware">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/grant-thornton.png" alt="Grant Thornton">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/intuit.png" alt="Intuit">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/citrix.png" alt="Citrix">
+          </div>
+          <div class="partner-logo">
+            <img src="assets/img/our-partners/nasscom.png" alt="NASSCOM">
+          </div>
+        </div>
       </div>
-      <div class="partners-flex">
-        <div class="partner-logo">CROWDSTRIKE</div>
-        <div class="partner-logo">NASSCOM</div>
-        <div class="partner-logo">EarthPartner</div>
-        <div class="partner-logo">VEEAM</div>
-        <div class="partner-logo">proofpoint.</div>
-        <div class="partner-logo" style="color:#FF9900;">aws</div>
-      </div>
+      <div class="partners-pagination" aria-label="Partner slider pagination"></div>
     </div>
   </section>
 
