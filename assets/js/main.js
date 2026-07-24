@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -------------------------------------------------------------------
-  // 7. Meet Our Customers Pagination
+  // 7. Meet Our Customers Two-Way Infinite Marquee
   // -------------------------------------------------------------------
   const customersGrid = document.querySelector('[data-customers-grid]');
   if (customersGrid) {
@@ -233,35 +233,22 @@ document.addEventListener('DOMContentLoaded', () => {
       ['16_Staffwiz.png', 'Staffwiz'], ['17_Southwest_Adjusters.png', 'Southwest Adjusters'],
       ['18_SRA.png', 'SRA']
     ];
-    const customerDots = document.querySelector('[data-customer-dots]');
-    const pageSize = 12;
-    const customerPageCount = Math.ceil(customerLogos.length / pageSize);
-    let customerPage = 0;
+    const createCards = (logos, duplicate = false) => logos.map(([file, name]) =>
+      `<div class="customer-logo-card"><img src="assets/img/our-meet/${file}" alt="${duplicate ? '' : name}"></div>`
+    ).join('');
 
-    const renderCustomerPage = (page) => {
-      customerPage = (page + customerPageCount) % customerPageCount;
-      const logos = customerLogos.slice(customerPage * pageSize, (customerPage + 1) * pageSize);
-      customersGrid.innerHTML = logos.map(([file, name]) =>
-        `<div class="customer-logo-card"><img src="assets/img/our-meet/${file}" alt="${name}"></div>`
-      ).join('');
-      customerDots.querySelectorAll('.customer-page-dot').forEach((dot, index) => {
-        dot.classList.toggle('active', index === customerPage);
-        dot.setAttribute('aria-current', index === customerPage ? 'true' : 'false');
-      });
-    };
+    const createMarqueeRow = (logos, directionClass) => `
+      <div class="customer-marquee-row ${directionClass}">
+        <div class="customer-marquee-track">
+          <div class="customer-marquee-group">${createCards(logos)}</div>
+          <div class="customer-marquee-group" aria-hidden="true">${createCards(logos, true)}</div>
+        </div>
+      </div>`;
 
-    for (let index = 0; index < customerPageCount; index += 1) {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'customer-page-dot';
-      dot.setAttribute('aria-label', `Show customer page ${index + 1}`);
-      dot.addEventListener('click', () => renderCustomerPage(index));
-      customerDots.appendChild(dot);
-    }
-
-    document.querySelector('[data-customer-prev]').addEventListener('click', () => renderCustomerPage(customerPage - 1));
-    document.querySelector('[data-customer-next]').addEventListener('click', () => renderCustomerPage(customerPage + 1));
-    renderCustomerPage(0);
+    const splitAt = Math.ceil(customerLogos.length / 2);
+    customersGrid.innerHTML =
+      createMarqueeRow(customerLogos.slice(0, splitAt), 'scroll-left') +
+      createMarqueeRow(customerLogos.slice(splitAt), 'scroll-right');
   }
 
   console.log('RTDS Template Script Initialized Successfully.');
