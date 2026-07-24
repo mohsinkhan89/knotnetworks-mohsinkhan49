@@ -98,6 +98,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // -------------------------------------------------------------------
   // 4. Scroll Reveal Animations (Fade In Up)
   // -------------------------------------------------------------------
+  const leftRevealSelectors = [
+    '.accordion-list', '.flex-row-block:not(.reverse) .visual-frame',
+    '.flex-row-block.reverse .block-text', '.testimonial-portrait',
+    '.career-dark-card', '.happening-news'
+  ];
+  const rightRevealSelectors = [
+    '.offerings-visual-wrapper', '.flex-row-block:not(.reverse) .block-text',
+    '.flex-row-block.reverse .visual-frame', '.quote-card',
+    '.career-content', '.happening-feature'
+  ];
+  const centerRevealSelectors = [
+    '.offerings-section .section-header-center', '.awards-section .section-header-center',
+    '.customers-heading', '.partners-heading'
+  ];
+  const staggerSelectors = [
+    '.metrics-grid', '.awards-cards-grid', '.award-recognition-stack',
+    '.customers-grid', '.partners-track'
+  ];
+
+  leftRevealSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => el.classList.add('reveal', 'reveal-left'));
+  });
+  rightRevealSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => el.classList.add('reveal', 'reveal-right'));
+  });
+  centerRevealSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => el.classList.add('reveal'));
+  });
+  staggerSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(el => el.classList.add('reveal', 'motion-stagger'));
+  });
+
   const revealElements = document.querySelectorAll('.reveal');
 
   if (revealElements.length > 0) {
