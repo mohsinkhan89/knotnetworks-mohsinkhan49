@@ -170,7 +170,8 @@ document.addEventListener('DOMContentLoaded', () => {
     '.customers-grid', '.partners-track',
     '.about-page .about-stats', '.about-page .leaders-grid',
     '.about-page .timeline', '.about-page .trust-logos',
-    '.contact-page .support-grid', '.contact-page .info-list'
+    '.contact-page .support-grid', '.contact-page .info-list',
+    '.faq-page .faq-tabs', '.faq-page .faq-metrics'
   ];
 
   leftRevealSelectors.forEach(selector => {
@@ -199,6 +200,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
   }
+
+  // -------------------------------------------------------------------
+  // FAQ category filtering and accessible accordion
+  // -------------------------------------------------------------------
+  const faqItems = document.querySelectorAll('.faq-item');
+  const faqTabs = document.querySelectorAll('.faq-tab');
+
+  const setFaqItemState = (item, open) => {
+    const button = item.querySelector('button');
+    const toggleIcon = item.querySelector('.faq-toggle i');
+    const chevron = item.querySelector('.faq-chevron');
+    item.classList.toggle('active', open);
+    button?.setAttribute('aria-expanded', String(open));
+    if (toggleIcon) toggleIcon.className = open ? 'fa-solid fa-minus' : 'fa-solid fa-plus';
+    if (chevron) chevron.className = `fa-solid ${open ? 'fa-chevron-up' : 'fa-chevron-down'} faq-chevron`;
+  };
+
+  faqItems.forEach(item => {
+    item.querySelector('button')?.addEventListener('click', () => {
+      const willOpen = !item.classList.contains('active');
+      faqItems.forEach(other => setFaqItemState(other, false));
+      setFaqItemState(item, willOpen);
+    });
+  });
+
+  faqTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const category = tab.dataset.category;
+      faqTabs.forEach(other => other.classList.toggle('active', other === tab));
+      let firstVisible;
+      faqItems.forEach(item => {
+        const matches = item.dataset.category?.split(' ').includes(category);
+        item.hidden = !matches;
+        setFaqItemState(item, false);
+        if (matches && !firstVisible) firstVisible = item;
+      });
+      if (firstVisible) setFaqItemState(firstVisible, true);
+    });
+  });
+
+  document.querySelector('[data-show-all-faqs]')?.addEventListener('click', () => {
+    faqTabs.forEach((tab, index) => tab.classList.toggle('active', index === 0));
+    faqItems.forEach((item, index) => {
+      item.hidden = false;
+      setFaqItemState(item, index === 0);
+    });
+    document.querySelector('.faq-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   // -------------------------------------------------------------------
   // 5. Header Sticky Shadow Effects

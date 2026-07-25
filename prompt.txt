@@ -18,3 +18,6 @@ reference prompts 006:
 
 reference prompts 007:
     update styles for about and contact pages; align footer content with header container
+
+reference prompts 008:
+    Add FAQ page with interactive elements and styling
