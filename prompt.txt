@@ -30,3 +30,6 @@ reference prompts 010:
 
 reference prompts 011:
     Update About Us section: enhance hero media layout and replace team image
+
+reference prompts 012:
+    Update contact information and enhance layout for About Us and FAQ sections

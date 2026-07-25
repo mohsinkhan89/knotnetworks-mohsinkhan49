@@ -114,3 +114,9 @@
 .about-hero .orb-a{display:none}.about-hero .dots-a{display:none}
 @media(max-width:800px){.about-hero-media{justify-self:center}}
 @media(max-width:520px){.about-hero-media{height:240px}.about-hero-media>img{border-radius:36px 58px 30px 55px}.about-hero-media .corner-one{left:-15px}.about-hero-media .corner-two{right:-8px}.about-hero-media .corner-three{right:-3px}}
+
+/* Keep the About hero heading on exactly two lines */
+.about-hero h1{font-size:3.05rem;font-weight:800;line-height:1.12;letter-spacing:-.5px}
+.about-hero h1>span{display:block;white-space:nowrap}
+@media(max-width:1024px){.about-hero h1{font-size:2.4rem}}
+@media(max-width:620px){.about-hero h1{font-size:clamp(1.75rem,7.5vw,2.4rem)}}
