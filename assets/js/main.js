@@ -147,20 +147,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const leftRevealSelectors = [
     '.accordion-list', '.flex-row-block:not(.reverse) .visual-frame',
     '.flex-row-block.reverse .block-text', '.testimonial-portrait',
-    '.career-dark-card', '.happening-news'
+    '.career-dark-card', '.happening-news',
+    '.about-page .story-photo'
   ];
   const rightRevealSelectors = [
     '.offerings-visual-wrapper', '.flex-row-block:not(.reverse) .block-text',
     '.flex-row-block.reverse .visual-frame', '.quote-card',
-    '.career-content', '.happening-feature'
+    '.career-content', '.happening-feature',
+    '.about-page .story-copy'
   ];
   const centerRevealSelectors = [
     '.offerings-section .section-header-center', '.awards-section .section-header-center',
-    '.customers-heading', '.partners-heading'
+    '.customers-heading', '.partners-heading',
+    '.about-page .purpose-panel', '.about-page .center-heading',
+    '.about-page .about-cta'
   ];
   const staggerSelectors = [
     '.metrics-grid', '.awards-cards-grid', '.award-recognition-stack',
-    '.customers-grid', '.partners-track'
+    '.customers-grid', '.partners-track',
+    '.about-page .about-stats', '.about-page .leaders-grid',
+    '.about-page .timeline', '.about-page .trust-logos'
   ];
 
   leftRevealSelectors.forEach(selector => {

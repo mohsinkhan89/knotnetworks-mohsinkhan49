@@ -1,2 +1,5 @@
 reference prompts 001:
     refactor footer layout and content for improved structure and accessibility
+
+reference prompts 002:
+    Add About Us page and related styles for improved company presentation
