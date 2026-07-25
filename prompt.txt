@@ -3,3 +3,6 @@ reference prompts 001:
 
 reference prompts 002:
     Add About Us page and related styles for improved company presentation
+
+reference prompts 003:  
+    Add contact page and associated styles for improved user communication

@@ -148,25 +148,29 @@ document.addEventListener('DOMContentLoaded', () => {
     '.accordion-list', '.flex-row-block:not(.reverse) .visual-frame',
     '.flex-row-block.reverse .block-text', '.testimonial-portrait',
     '.career-dark-card', '.happening-news',
-    '.about-page .story-photo'
+    '.about-page .story-photo',
+    '.contact-page .message-panel', '.contact-page .office-copy'
   ];
   const rightRevealSelectors = [
     '.offerings-visual-wrapper', '.flex-row-block:not(.reverse) .block-text',
     '.flex-row-block.reverse .visual-frame', '.quote-card',
     '.career-content', '.happening-feature',
-    '.about-page .story-copy'
+    '.about-page .story-copy',
+    '.contact-page .contact-info-panel', '.contact-page .office-map'
   ];
   const centerRevealSelectors = [
     '.offerings-section .section-header-center', '.awards-section .section-header-center',
     '.customers-heading', '.partners-heading',
     '.about-page .purpose-panel', '.about-page .center-heading',
-    '.about-page .about-cta'
+    '.about-page .about-cta',
+    '.contact-page .support-heading', '.contact-page .contact-cta'
   ];
   const staggerSelectors = [
     '.metrics-grid', '.awards-cards-grid', '.award-recognition-stack',
     '.customers-grid', '.partners-track',
     '.about-page .about-stats', '.about-page .leaders-grid',
-    '.about-page .timeline', '.about-page .trust-logos'
+    '.about-page .timeline', '.about-page .trust-logos',
+    '.contact-page .support-grid', '.contact-page .info-list'
   ];
 
   leftRevealSelectors.forEach(selector => {
