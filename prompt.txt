@@ -27,3 +27,6 @@ reference prompts 009:
 
 reference prompts 010:
     enhance contact hero media styling and responsiveness
+
+reference prompts 011:
+    Update About Us section: enhance hero media layout and replace team image
