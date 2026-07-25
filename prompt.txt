@@ -15,3 +15,6 @@ reference prompts 005:
 
 reference prompts 006:
     Add interactive office location map to contact page
+
+reference prompts 007:
+    update styles for about and contact pages; align footer content with header container

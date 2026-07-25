@@ -4374,6 +4374,16 @@ section p {
 .footer-legal-links a { color: #839ab6; transition: color .25s ease; }
 .footer-legal-links a:hover { color: #6FAEFF; }
 
+/* Keep footer content aligned with the same container used by the header */
+.main-footer .footer-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
 @media (max-width: 1024px) {
   .footer-main-grid { grid-template-columns: 1.4fr 1fr 1fr; }
   .footer-office { grid-column: 1 / -1; }
