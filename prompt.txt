@@ -1,0 +1,2 @@
+reference prompts 001:
+    refactor footer layout and content for improved structure and accessibility
