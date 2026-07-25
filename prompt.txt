@@ -33,3 +33,6 @@ reference prompts 011:
 
 reference prompts 012:
     Update contact information and enhance layout for About Us and FAQ sections
+
+reference prompts 013:
+    add shared header script and update HTML files to include it
