@@ -53,3 +53,13 @@
 .message-panel{align-self:start;height:fit-content!important;min-height:0!important}
 .contact-info-panel{align-self:start;height:fit-content!important;min-height:0!important}
 .contact-form{align-content:start}
+
+/* Interactive office location map */
+.office-map{isolation:isolate;height:310px;border:8px solid #fff;background:#dce8f3}
+.office-map iframe{display:block;width:100%;height:100%;border:0;filter:saturate(.88) contrast(1.03)}
+.map-location-card{position:absolute;z-index:3;right:18px;bottom:18px;display:grid;grid-template-columns:42px 1fr 30px;align-items:center;gap:11px;min-width:285px;padding:11px 12px;border:1px solid rgba(213,228,245,.9);border-radius:14px;background:rgba(255,255,255,.94);box-shadow:0 12px 32px rgba(16,52,94,.2);backdrop-filter:blur(12px)}
+.map-location-icon{display:grid;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#2479ed,#54a2ff);color:#fff;font-size:18px;place-items:center}
+.map-location-card strong,.map-location-card small{display:block}.map-location-card strong{color:#112748;font-size:.8rem;font-weight:800}.map-location-card small{margin-top:2px;color:#6d7d94;font-size:.68rem}
+.map-location-card>a{display:grid;width:30px;height:30px;border-radius:8px;background:#edf5ff;color:#277bec;font-size:.72rem;place-items:center;transition:all var(--transition-fast)}
+.map-location-card>a:hover{background:#277bec;color:#fff;transform:translateY(-2px)}
+@media(max-width:520px){.office-map{height:290px}.map-location-card{right:10px;bottom:10px;left:10px;min-width:0}}

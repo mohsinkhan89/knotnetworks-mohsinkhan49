@@ -12,3 +12,6 @@ reference prompts 004:
 
 reference prompts 005:
     refactor contact form layout and improve typography for consistency
+
+reference prompts 006:
+    Add interactive office location map to contact page
