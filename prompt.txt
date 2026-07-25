@@ -36,3 +36,6 @@ reference prompts 012:
 
 reference prompts 013:
     add shared header script and update HTML files to include it
+
+reference prompts 014:
+    refine footer styles and layout for improved responsiveness and aesthetics
