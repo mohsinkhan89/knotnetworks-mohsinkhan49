@@ -39,3 +39,6 @@ reference prompts 013:
 
 reference prompts 014:
     refine footer styles and layout for improved responsiveness and aesthetics
+
+reference prompts 015:
+    update corporate office address and footer styles across multiple pages

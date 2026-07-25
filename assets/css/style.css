@@ -4440,8 +4440,8 @@ section p {
 .main-footer .footer-container { position: relative; z-index: 1; }
 
 .footer-main-grid {
-  grid-template-columns: minmax(285px, 1.35fr) minmax(150px, .68fr) minmax(150px, .68fr) minmax(320px, 1.18fr);
-  gap: clamp(2.25rem, 4vw, 4rem);
+  grid-template-columns: minmax(285px, 1.22fr) minmax(155px, .7fr) minmax(155px, .7fr) minmax(365px, 1.42fr);
+  gap: clamp(1.4rem, 2.3vw, 2.5rem);
   align-items: stretch;
   padding-bottom: 3.5rem;
 }
@@ -4485,8 +4485,8 @@ section p {
 .footer-links-list a { color: #9bafc7; font-size: .9rem; }
 
 .footer-office {
-  min-height: 100%;
-  padding: 1.8rem 1.75rem;
+  min-height: 320px;
+  padding: 2rem 2rem;
   border: 1px solid rgba(113, 174, 245, .2);
   border-radius: 20px;
   background:
