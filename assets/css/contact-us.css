@@ -64,6 +64,9 @@
 .map-location-card>a:hover{background:#277bec;color:#fff;transform:translateY(-2px)}
 @media(max-width:520px){.office-map{height:290px}.map-location-card{right:10px;bottom:10px;left:10px;min-width:0}}
 
+/* Screenshot-matched contact banner asset */
+.contact-hero-media>img{object-position:center center}
+
 /* Match the home page container edges */
 .contact-page .container{max-width:var(--container-max-width)}
 .contact-layout{padding-right:0;padding-left:0}

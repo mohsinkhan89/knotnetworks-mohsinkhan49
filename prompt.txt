@@ -21,3 +21,6 @@ reference prompts 007:
 
 reference prompts 008:
     Add FAQ page with interactive elements and styling
+
+reference prompts 009:
+    update contact us page assets and remove unused images
